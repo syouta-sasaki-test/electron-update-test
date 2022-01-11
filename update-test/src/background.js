@@ -81,23 +81,13 @@ if (isDevelopment) {
   }
 }
 
-autoUpdater.on('update-downloaded', ({ version, files, path, sha512, releaseName, releaseNotes, releaseDate }) => {
-  const detail = `${app.getName()} ${version} ${releaseDate}`
-
-  dialog.showMessageBox(
-    win, // new BrowserWindow
-    {
-      type: 'question',
-      buttons: ['再起動', 'あとで'],
-      defaultId: 0,
-      cancelId: 999,
-      message: '新しいバージョンをダウンロードしました。再起動しますか？',
-      detail
-    },
-    res => {
-      if (res  === 0) {
-        autoUpdater.quitAndInstall()
-      }
-    }
-  )
+autoUpdater.on('update-downloaded', ({ version, releaseDate }) => {
+  console.log(version);
+  console.log(releaseDate);
+  autoUpdater.quitAndInstall()
 });
+
+const min = 1
+app.on('ready', () => {
+  setInterval(() => autoUpdater.checkForUpdatesAndNotify(), 1000 * 60 * min)
+})
