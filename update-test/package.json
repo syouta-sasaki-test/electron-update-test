@@ -1,7 +1,9 @@
 {
   "name": "update-test",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
+  "author": "test",
+  "description": "test",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,8 +11,7 @@
     "electron:build": "vue-cli-service electron:build",
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps",
-    "dist": "electron-builder --publish always"
+    "postuninstall": "electron-builder install-app-deps"
   },
   "main": "background.js",
   "dependencies": {
@@ -49,11 +50,5 @@
     "last 2 versions",
     "not dead"
   ],
-  "build": {
-    "publish": {
-      "provider": "github",
-      "owner": "syouta-sasaki-test",
-      "repo": "electron-update-test"
-    }
-  }
+  "repository": "https://github.com/syouta-sasaki-test/electron-update-test/tree/main/update-test"
 }
