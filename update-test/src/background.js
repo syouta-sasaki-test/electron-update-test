@@ -3,7 +3,7 @@
 import { app, protocol, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS3_DEVTOOLS } from 'electron-devtools-installer'
-const {autoUpdater} = require("electron-updater");
+import './auto-update';
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Scheme must be registered before the app is ready
@@ -80,14 +80,3 @@ if (isDevelopment) {
     })
   }
 }
-
-autoUpdater.on('update-downloaded', ({ version, releaseDate }) => {
-  console.log(version);
-  console.log(releaseDate);
-  autoUpdater.quitAndInstall()
-});
-
-const min = 1
-app.on('ready', () => {
-  setInterval(() => autoUpdater.checkForUpdatesAndNotify(), 1000 * 60 * min)
-})
