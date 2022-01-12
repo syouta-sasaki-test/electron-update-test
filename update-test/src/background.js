@@ -2,37 +2,12 @@
 
 // import { app } from 'electron';
 import { app, protocol, BrowserWindow } from 'electron'
-import log from 'electron-log';
 import { autoUpdater } from 'electron-updater';
-autoUpdater.logger = log;
-autoUpdater.logger.transports.file.level = 'info';
-log.info('App starting...');
-function sendStatusToWindow(text) {
-  log.info(text);
-}
-autoUpdater.on('checking-for-update', () => {
-  sendStatusToWindow('Checking for update...');
-})
-autoUpdater.on('update-available', () => {
-  sendStatusToWindow('Update available.');
-})
-autoUpdater.on('update-not-available', () => {
-  sendStatusToWindow('Update not available.');
-})
-autoUpdater.on('error', (err) => {
-  sendStatusToWindow('Error in auto-updater. ' + err);
-})
-autoUpdater.on('download-progress', (progressObj) => {
-  let log_message = "Download speed: " + progressObj.bytesPerSecond;
-  log_message = log_message + ' - Downloaded ' + progressObj.percent + '%';
-  log_message = log_message + ' (' + progressObj.transferred + "/" + progressObj.total + ')';
-  sendStatusToWindow(log_message);
-})
-autoUpdater.on('update-downloaded', () => {
-  sendStatusToWindow('Update downloaded');
-});
-
-
+console.log(333333);
+const log = require("electron-log")
+log.transports.file.level = "debug"
+autoUpdater.logger = log
+autoUpdater.checkForUpdatesAndNotify()
 
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS3_DEVTOOLS } from 'electron-devtools-installer'
@@ -87,9 +62,6 @@ app.on('activate', () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', async () => {
-  console.log(333333);
-  autoUpdater.checkForUpdatesAndNotify();
-
   if (isDevelopment && !process.env.IS_TEST) {
     // Install Vue Devtools
     try {
