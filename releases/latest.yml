@@ -1,8 +1,8 @@
-version: 0.4.0
+version: 0.4.3
 files:
-  - url: update-test-Setup-0.4.0.exe
-    sha512: GozkG0hTf0/z+hOj3wc3fmIvBwRmIe+PpS6I6URNPwnUoxRoy3ZC6GvtShD0M7q/OHQdKOM73iWNuOm/DdfNxw==
-    size: 58986399
-path: update-test-Setup-0.4.0.exe
-sha512: GozkG0hTf0/z+hOj3wc3fmIvBwRmIe+PpS6I6URNPwnUoxRoy3ZC6GvtShD0M7q/OHQdKOM73iWNuOm/DdfNxw==
-releaseDate: '2022-01-12T06:51:32.646Z'
+  - url: update-test-Setup-0.4.3.exe
+    sha512: wFiGJh9TiCfRjBprlBintRVo5NKTQi/2zRXSS3hdjGsKC0Ev7QQqHNs8eAQ6WhkDV74wjMfCvSvYhSIWtgiIwQ==
+    size: 58986531
+path: update-test-Setup-0.4.3.exe
+sha512: wFiGJh9TiCfRjBprlBintRVo5NKTQi/2zRXSS3hdjGsKC0Ev7QQqHNs8eAQ6WhkDV74wjMfCvSvYhSIWtgiIwQ==
+releaseDate: '2022-01-12T08:33:09.823Z'

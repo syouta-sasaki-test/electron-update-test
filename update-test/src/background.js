@@ -1,16 +1,9 @@
 'use strict'
 
-// import { app } from 'electron';
 import { app, protocol, BrowserWindow } from 'electron'
-import { autoUpdater } from 'electron-updater';
-console.log(333333);
-const log = require("electron-log")
-log.transports.file.level = "debug"
-autoUpdater.logger = log
-autoUpdater.checkForUpdatesAndNotify()
-
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS3_DEVTOOLS } from 'electron-devtools-installer'
+import './auto-update';
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Scheme must be registered before the app is ready
