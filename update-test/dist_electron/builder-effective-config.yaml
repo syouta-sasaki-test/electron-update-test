@@ -1,0 +1,15 @@
+directories:
+  output: dist_electron
+  buildResources: build
+  app: dist_electron/bundled
+files:
+  - filter:
+      - '**'
+extends: null
+publish:
+  provider: github
+  owner: syouta-sasaki-test
+  repo: electron-update-test
+  token: <stripped sensitive data>
+  releaseType: release
+electronVersion: 13.6.6

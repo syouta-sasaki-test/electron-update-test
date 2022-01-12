@@ -24,4 +24,5 @@ pnpm-debug.log*
 *.sw?
 
 #Electron-builder output
-/dist_electron
+/dist_electron/bundled
+/dist_electron/win-unpacked
