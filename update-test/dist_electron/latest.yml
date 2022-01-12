@@ -1,8 +1,8 @@
-version: 0.3.3
+version: 0.3.4
 files:
-  - url: update-test-Setup-0.3.3.exe
-    sha512: FVOXSQsyRadpGEfSGzaZDN7DywF5x4LWgWizgooJ8K8bTRU9lbl5eccusITWctA7v4Gjn5XSMNeOK1Ef8KAnyQ==
-    size: 58986571
-path: update-test-Setup-0.3.3.exe
-sha512: FVOXSQsyRadpGEfSGzaZDN7DywF5x4LWgWizgooJ8K8bTRU9lbl5eccusITWctA7v4Gjn5XSMNeOK1Ef8KAnyQ==
-releaseDate: '2022-01-12T05:18:49.238Z'
+  - url: update-test-Setup-0.3.4.exe
+    sha512: BOvKWgwGXRX3Sl+YQgfj8Byoh1BTxuBFO2m1fxVdYisLxv0RkMPSBLYy+jt9NT/Ju3rl4KubLBVdgfrgy8pHnw==
+    size: 58986587
+path: update-test-Setup-0.3.4.exe
+sha512: BOvKWgwGXRX3Sl+YQgfj8Byoh1BTxuBFO2m1fxVdYisLxv0RkMPSBLYy+jt9NT/Ju3rl4KubLBVdgfrgy8pHnw==
+releaseDate: '2022-01-12T05:32:15.909Z'

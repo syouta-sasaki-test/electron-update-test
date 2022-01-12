@@ -31,9 +31,7 @@ autoUpdater.on('download-progress', (progressObj) => {
 autoUpdater.on('update-downloaded', () => {
   sendStatusToWindow('Update downloaded');
 });
-app.on('ready', async () => {
-  autoUpdater.checkForUpdatesAndNotify();
-});
+
 
 
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
@@ -89,6 +87,9 @@ app.on('activate', () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', async () => {
+  console.log(333333);
+  autoUpdater.checkForUpdatesAndNotify();
+
   if (isDevelopment && !process.env.IS_TEST) {
     // Install Vue Devtools
     try {
