@@ -1,0 +1,22 @@
+name: CI
+
+win:
+  publish:
+    - github
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-on-win:
+    runs-on: windows-latest
+    env:
+      GH_TOKEN: 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
+    # steps:
+    #   - name: yarn install
+    #     run: yarn
+    #   - name: do package
+    #     run: |
+    #       yarn publish_dist
